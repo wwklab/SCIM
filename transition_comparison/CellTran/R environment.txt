@@ -1,0 +1,12 @@
+# R environment
+R = 4.4.0
+install.packages('remote')
+remotes::install_version("Seurat", "4.4.0")     注意！！！install_version("Seurat", "4.4.0"）并不能真地安装4.4.0版本，必须借助remote
+install.packages('glasso')
+install.packages('scLink')
+
+#  run R with ipynb 
+if(!require(devtools)) install.packages("devtools");
+devtools::install_github("KChen-lab/transition-cells-identification",force=T)
+install.packages("IRkernel")
+IRkernel::installspec()
